@@ -3,6 +3,7 @@ package com.mishkaowner.retrika
 import com.mishkaowner.appbasekotlin.BaseApp
 import com.mishkaowner.appbasekotlin.di.component.DaggerBaseAppComponent
 import com.mishkaowner.appbasekotlin.di.module.BaseAppModule
+import com.mishkaowner.retrika.di.DaggerRetrikaAppComponent
 import com.mishkaowner.retrika.di.RetrikaAppComponent
 import com.mishkaowner.retrika.di.RetrikaAppModule
 import io.realm.Realm
