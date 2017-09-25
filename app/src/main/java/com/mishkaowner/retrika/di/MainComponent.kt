@@ -2,6 +2,7 @@ package com.mishkaowner.retrika.di
 
 import com.mishkaowner.appbasekotlin.di.scope.ActivityScope
 import com.mishkaowner.retrika.ui.MainActivity
+import com.mishkaowner.retrika.ui.MainFragment
 import dagger.Subcomponent
 
 /**
@@ -10,5 +11,5 @@ import dagger.Subcomponent
 @ActivityScope
 @Subcomponent(modules = arrayOf(MainModule::class))
 interface MainComponent {
-    fun inject(activity: MainActivity)
+    fun inject(activity: MainFragment)
 }

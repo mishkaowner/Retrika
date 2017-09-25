@@ -1,6 +1,5 @@
 package com.mishkaowner.retrika.ui
 
-import android.util.Log
 import com.mishkaowner.appbasekotlin.ui.base.BaseAbstractPresenter
 import com.mishkaowner.appbasekotlin.util.applyObservableScheduler
 import javax.inject.Inject
@@ -16,8 +15,12 @@ class MainPresenterImpl @Inject constructor(view : MainView)
     override fun onCreate() {
         super.onCreate()
         view.setList()
+    }
+
+    override fun onResume() {
+        super.onResume()
         mainInteractor.getUsers().applyObservableScheduler().subscribe({
             view.updateList(it)
-        }, { Log.e("ER_MainPresenterImpl", it.toString()) })
+        }, { it.printStackTrace() })
     }
 }
